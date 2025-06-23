@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog | EcoVida</title>
+  <title>Blog</title>
   <link rel="stylesheet" href="css/estilos.css" />
 </head>
 <body>
@@ -12,8 +12,12 @@
     <img src="Imagen1.svg" alt="Logo de EcoVida" class="logo-ecovida" />
     <h1>EcoVida</h1>
   </div>
+
+<!-- Botón hamburguesa (visible solo en móviles) -->
+<button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+
     <nav>
-      <ul>
+      <ul class="menu-principal">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="blog.html">Blog</a></li>
@@ -24,24 +28,34 @@
     </nav>
   </header>
   <main class="container">
-    <section>
-      <h2>Blog de Sostenibilidad</h2>
-      
-    <article>
-      <h3>Consejos para reducir residuos en casa</h3>
-      <img src="Imagen2.svg" alt="Reducir residuos" width="280" />
-      <p>Descubre maneras prácticas de reducir la cantidad de desechos que generas en tu día a día. Desde compostaje hasta compras conscientes.</p>
-    </article>
-    <article>
-      <h3>Cómo identificar productos realmente sostenibles</h3>
-      <img src="Imagen3.svg" alt="Productos sostenibles" width="280" />
-      <p>No todo lo "verde" es ecológico. Aprende a leer etiquetas y verificar certificaciones ambientales para elegir mejor.</p>
-    </article>
-    
-    </section>
-  </main>
+  <h2 style="text-align: center;">Blog Ecológico</h2>
+  <section class="blog-grid">
+    <!-- Cuadro 1 -->
+    <div class="blog-item animacion-scroll" data-info="¡Separar residuos es más fácil de lo que parece! Aprende cómo empezar desde casa.">
+      <h3>Reciclaje</h3>
+      <img src="reciclaje.webp" alt="Reciclaje" />
+      <div class="blog-info"></div>
+    </div>
+
+    <!-- Cuadro 2 -->
+    <div class="blog-item animacion-scroll" data-info="Empieza tu camino ecológico con estos 5 hábitos sostenibles que puedes aplicar hoy.">
+      <h3>Consejos eco para principiantes</h3>
+      <img src="Consejos .webp" alt="Consejos ecológicos" />
+      <div class="blog-info"></div>
+    </div>
+
+    <!-- Cuadro 3 -->
+    <div class="blog-item animacion-scroll" data-info="¿Es cierto que lo biodegradable se descompone siempre? Te contamos qué es mito y qué no.">
+      <h3>Mitos y verdades ecológicas</h3>
+      <img src="mitos .webp" alt="Mitos ecológicos" />
+      <div class="blog-info"></div>
+    </div>
+  </section>
+</main>
+
   <footer>
-    <p>&copy; 2025 EcoVida. Todos los derechos reservados.</p>
+    <p>&copy; 2025 EcoVida.</p>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>

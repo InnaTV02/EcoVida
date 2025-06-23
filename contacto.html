@@ -3,17 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contacto | EcoVida</title>
+  <title>Contacto</title>
   <link rel="stylesheet" href="css/estilos.css" />
 </head>
 <body>
   <header>
     <div class="logo-contenedor">
-    <img src="Imagen1.svg" alt="Logo de EcoVida" class="logo-ecovida" />
-    <h1>EcoVida</h1>
-  </div>
+      <img src="Imagen1.svg" alt="Logo de EcoVida" class="logo-ecovida" />
+      <h1>EcoVida</h1>
+    </div>
+
+<!-- Botón hamburguesa (visible solo en móviles) -->
+<button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+
     <nav>
-      <ul>
+      <ul class="menu-principal">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="blog.html">Blog</a></li>
@@ -23,14 +27,53 @@
       </ul>
     </nav>
   </header>
+
   <main class="container">
-    <section>
-      <h2>Contáctanos</h2>
-      <p>Contenido próximamente.</p>
-    </section>
+    <h2 style="text-align: center;">Contáctanos</h2>
+
+    <div class="contacto-grid">
+      <!--  info  -->
+      <div class="contacto-info animacion-scroll">
+        <h3>Información de contacto</h3>
+        <p>📞 Teléfono: +507 6000-0000</p>
+        <p>📧 Correo: contacto@ecovida.org</p>
+        <p>📍 Ciudad de Panamá</p>
+        <p>🌐 Redes sociales:</p>
+        <ul>
+          <li>Instagram: @ecovida</li>
+          <li>Facebook: EcoVida Panamá</li>
+          <li>Twitter: @EcoVidaPA</li>
+        </ul>
+      </div>
+
+      <!-----formulario----->
+      <form id="formulario-contacto" class="formulario-contacto animacion-scroll">
+        <h3>Formulario de contacto</h3>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required />
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required />
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+        <button type="submit">Enviar</button>
+
+        <p id="mensaje-error" class="mensaje-error"></p>
+        <p id="mensaje-exito" class="mensaje-exito">Mensaje enviado con éxito ✅</p>
+      </form>
+    </div>
   </main>
+
   <footer>
-    <p>&copy; 2025 EcoVida. Todos los derechos reservados.</p>
+    <p>&copy; 2025 EcoVida.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

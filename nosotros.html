@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nosotros | EcoVida</title>
+  <title>Nosotros</title>
   <link rel="stylesheet" href="css/estilos.css" />
 </head>
 <body>
@@ -12,8 +12,12 @@
     <img src="Imagen1.svg" alt="Logo de EcoVida" class="logo-ecovida" />
     <h1>EcoVida</h1>
   </div>
+
+<!-- Botón hamburguesa (visible solo en móviles) -->
+<button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+
     <nav>
-      <ul>
+      <ul class="menu-principal">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="blog.html">Blog</a></li>
@@ -24,16 +28,46 @@
     </nav>
   </header>
   <main class="container">
-    <section>
-      <h2>Sobre Nosotros</h2>
-      
-    <p>Somos un equipo comprometido con el futuro del planeta. Creemos que la sostenibilidad comienza con la educación y pequeñas acciones diarias.</p>
-    <img src="Imagen1.svg" alt="Equipo EcoVida comprometido con la naturaleza" width="300" />
-    
-    </section>
-  </main>
+  <h2 style="text-align: center;">Conócenos</h2>
+
+  <!-- Bloque 1 -->
+  <section class="nosotros-bloque quienes-somos animacion-scroll">
+    <h3>¿Quiénes somos?</h3>
+    <p>EcoVida es una comunidad de personas comprometidas con el cambio ecológico. Buscamos educar, inspirar y apoyar estilos de vida sostenibles desde el hogar, el trabajo y la sociedad.</p>
+  </section>
+
+  <!-- Bloques 2 y 3  -->
+ <div class="nosotros-dos-columnas ">
+  <!-- Bloque 2: Valores -->
+  <section class="nosotros-bloque acordeon animacion-scroll">
+    <h3 class="acordeon-titulo">Nuestros valores</h3>
+    <div class="acordeon-contenido">
+      <ul>
+        <li>🌱 Compromiso con el medio ambiente</li>
+        <li>🌿 Educación accesible</li>
+        <li>💚 Comunidad y colaboración</li>
+        <li>♻️ Consumo responsable</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Bloque 3: Misión y Visión -->
+  <section class="nosotros-bloque acordeon animacion-scroll">
+    <h3 class="acordeon-titulo">Misión y Visión</h3>
+    <div class="acordeon-contenido">
+      <h4>Misión</h4>
+      <p>Fomentar una cultura ecológica a través de información, herramientas y experiencias.</p>
+      <h4>Visión</h4>
+      <p>Ser una plataforma líder en sostenibilidad para personas que desean transformar su forma de vivir y consumir.</p>
+    </div>
+  </section>
+</div>
+
+</main>
+
   <footer>
-    <p>&copy; 2025 EcoVida. Todos los derechos reservados.</p>
+    <p>&copy; 2025 EcoVida. </p>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -16,10 +16,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-/*------------------------------------*/
 
+/*------------------ NAV ------------------*/
 nav {
-  background-color: var(--verde-oliva);
   padding: 1rem;
 }
 
@@ -34,14 +33,17 @@ nav a {
   color: var(--blanco);
   text-decoration: none;
   font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
-/*------------------------------------*/
-
+/*------------------ BODY ------------------*/
 body {
   font-family: var(--fuente-texto);
   background-color: var(--blanco);
@@ -57,16 +59,9 @@ header {
   padding: 0;
 }
 
-
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--fuente-titulo);
   color: var(--verde-oliva);
-}
-
-nav ul {
-  display: flex;
-  gap: 1rem;
-  list-style: none;
 }
 
 a {
@@ -75,10 +70,11 @@ a {
 }
 
 footer {
-  background-color: var(--beige);
+  background-color: var(--verde-oliva);
   text-align: center;
   padding: 1rem 0;
   margin-top: 2rem;
+  color: var(--beige); 
 }
 
 .container {
@@ -87,20 +83,7 @@ footer {
 }
 
 
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-  }
-}
-
-@media (min-width: 601px) and (max-width: 1024px) {
-  nav ul {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-}
-
-
+/*------------------ LOGO ------------------*/
 .logo-contenedor {
   display: flex;
   align-items: center;
@@ -111,4 +94,397 @@ footer {
   width: 150px;
   height: auto;
 }
+
+/*------------------CONTENIDO DE INICIO ------------------*/
+.inicio-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.carrusel {
+  flex: 1;
+  max-width: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.carrusel-img {
+  width: 100%;
+  display: none;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  border-radius: 12px;
+}
+
+.carrusel-img.active {
+  display: block;
+  opacity: 1;
+}
+
+.texto-inicio {
+  flex: 1;
+  background-color: var(--gris-claro);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.bloque-extra {
+  margin-top: 3rem;
+  background: linear-gradient(135deg, var(--beige), var(--salvia));
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.imagen-extra {
+  width: 80%;
+  max-width: 400px;
+  margin-top: 1rem;
+  border-radius: 10px;
+}
+
+/*------------------ BLOG ------------------*/
+.blog-grid {
+  background-color: var(--beige);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+.blog-item {
+  background-color: var(--blanco);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.blog-item:hover {
+  transform: scale(1.02);
+}
+
+.blog-item h3 {
+  color: var(--verde-oliva);
+  margin-bottom: 0.5rem;
+}
+
+.blog-item img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.blog-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(245, 245, 220, 0.95);
+  color: var(--verde-oliva);
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 10px;
+}
+
+/*------------------ NOSOTROS ------------------*/
+.nosotros-bloque {
+  background-color: var(--blanco);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: var(--verde-oliva);
+}
+
+.quienes-somos {
+  background-color: var(--gris-claro);
+}
+
+.nosotros-dos-columnas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.nosotros-dos-columnas .acordeon {
+  flex: 1;
+  min-width: 300px;
+  background-color: var(--beige);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+/* Acordeón */
+.acordeon-titulo {
+  background-color: var(--gris-claro);
+  padding: 1rem;
+  cursor: pointer;
+  position: relative;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--verde-oliva);
+  border-radius: 8px; 
+}
+
+.acordeon-titulo::after {
+  content: '▼';
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+  font-size: 1rem;
+}
+
+.acordeon-activo .acordeon-titulo::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.acordeon-contenido {
+  display: none;
+  background-color: var(--blanco);
+  padding: 1rem;
+  animation: fadeIn 0.3s ease-in-out;
+  color: var(--verde-oliva);
+}
+
+.acordeon-activo .acordeon-contenido {
+  display: block;
+}
+
+.acordeon-contenido ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.acordeon-contenido ul li {
+  margin-bottom: 0.5rem;
+}
+
+.acordeon-contenido ul li::before {
+  content: '✔️ '; 
+  color: var(--verde-oliva);
+  margin-right: 0.5rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/*------------- CONTACTO -----------------*/
+
+.contacto-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contacto-info,
+.formulario-contacto {
+  flex: 1;
+  min-width: 300px;
+  background-color: var(--beige);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: var(--verde-oliva);
+}
+
+.contacto-info h3,
+.formulario-contacto h3 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color: var(--verde-oliva);
+}
+
+.contacto-info ul {
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.contacto-info li {
+  margin-bottom: 0.5rem;
+}
+
+/*----------- PARTE DEL FORMULARIO -----------*/
+
+.formulario-contacto label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: var(--verde-oliva);
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: var(--fuente-texto);
+  font-size: 1rem;
+  color: #333;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+  outline: none;
+  border-color: var(--verde-oliva);
+  box-shadow: 0 0 5px rgba(85, 107, 47, 0.3);
+}
+
+.formulario-contacto button {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--verde-oliva);
+  color: var(--blanco);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.formulario-contacto button:hover {
+  background-color: #6b8e23;
+  transform: scale(1.03);
+}
+
+/*------------- MENSAJES DE RESPUESTA ----------------*/
+
+.mensaje-error {
+  margin-top: 1rem;
+  color: var(--marron);
+  background-color: #fce5e5;
+  border-left: 4px solid crimson;
+  display: none;
+  font-weight: bold;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+}
+
+.mensaje-exito {
+  margin-top: 1rem;
+  color: var(--verde-oliva);
+  background-color: var(--salvia);
+  border-left: 4px solid var(--verde-oliva);
+  display: none;
+  font-weight: bold;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+}
+/*esta parte es para que al cargar la pagina de contacto
+el formulario se deslice, tambien el contacto y aparte una parte del index */
+/* Animación de deslizamiento al hacer scroll en todos los elementos que se seleccionen*/
+.animacion-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.animacion-scroll.activar-animacion {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*---------ajuste de la pag de inicio (carrusel y texto)---------------*/
+@media (max-width: 768px) {
+  .inicio-layout {
+    flex-direction: column;
+    align-items: center; /* centra el contenido */
+  }
+
+  .carrusel {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .texto-inicio {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+
+  .carrusel-img {
+    max-height: 250px;
+    object-fit: cover;
+  }
+}
+
+/*-----------------------------------*/
+/* NAV: versión responsive móvil y escritorio */
+
+/* VERSIÓN MÓVIL (hasta 768px) */
+@media (max-width: 768px) {
+  nav {
+    background-color: transparent; /* quita la barra verde */
+  }
+
+  .menu-toggle {
+    display: block;   /* Pesto es ara que el botón se muestre */
+     font-size: 2.5rem;           /* tamaño de icono de menu */
+      background: none; /* Evita fondo por defecto del botón */
+     border: none;
+    color: var(--verde-oliva); /* 3 rayitas en verde oliva */
+    cursor: pointer;
+  margin: 0.5rem 1rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  }
+
+  nav ul.menu-principal {
+    display: none;
+    flex-direction: column;
+    background-color: var(--verde-oliva);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+  }
+
+  nav ul.menu-principal.activo {
+    display: flex;
+  }
+}
+
+/* VERSIÓN ESCRITORIO (más de 768px) */
+@media (min-width: 769px) {
+  nav {
+    background-color: var(--verde-oliva); /* solo aquí se ve la barra verde */
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  nav ul.menu-principal {
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    padding: 0;
+  }
+}
+
 

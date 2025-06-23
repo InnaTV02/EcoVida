@@ -3,17 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inicio | EcoVida</title>
+  <title>Inicio</title>
   <link rel="stylesheet" href="css/estilos.css" />
 </head>
 <body>
  <header>
   <div class="logo-contenedor">
+
     <img src="Imagen1.svg" alt="Logo de EcoVida" class="logo-ecovida" />
     <h1>EcoVida</h1>
   </div>
+<!-- Botón hamburguesa (visible solo en móviles) -->
+<button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+
   <nav>
-    <ul>
+    <ul class="menu-principal">
       <li><a href="index.html">Inicio</a></li>
       <li><a href="nosotros.html">Nosotros</a></li>
       <li><a href="blog.html">Blog</a></li>
@@ -24,14 +28,35 @@
   </nav>
 </header>
 
+  <!-- parte del main-->
   <main class="container">
-    <section>
-      <h2>Bienvenido a EcoVida</h2>
-      <p>Contenido próximamente.</p>
+    <!----------Carrusel + el bloque gris ---------->
+    <section class="inicio-layout">
+      <div class="carrusel animacion-scroll">
+        <img src="inicio1.webp" class="carrusel-img active" alt="Ecología 1" />
+        <img src="inicio2.webp" class="carrusel-img" alt="Ecología 2" />
+        <img src="inicio3.webp" class="carrusel-img" alt="Ecología 3" />
+        <img src="inicio4.webp" class="carrusel-img" alt="Ecología 4" />
+        <img src="inicio5.webp" class="carrusel-img" alt="Ecología 5" />
+      </div>
+      <div class="texto-inicio animacion-scroll">
+        <h2>Bienvenido a EcoVida</h2>
+        <p>EcoVida es una plataforma educativa y comunitaria que fomenta un estilo de vida sostenible a través de información práctica y productos ecológicos.</p>
+        <p>Únete al cambio. Vive de forma consciente y haz la diferencia desde tu hogar.</p>
+      </div>
+    </section>
+
+    <!-- Sección informativa inferior -->
+    <section class="bloque-extra">
+      <h2>¿Por qué vivir de forma sostenible?</h2>
+      <p>Adoptar hábitos ecológicos no solo protege el planeta, también mejora tu salud y economía. Cada acción cuenta, desde usar productos reutilizables hasta reducir el consumo energético.</p>
+      <img src="inicio6.webp" alt="Sostenibilidad diaria" class="imagen-extra" />
     </section>
   </main>
+
   <footer>
-    <p>&copy; 2025 EcoVida. Todos los derechos reservados.</p>
+    <p>&copy; 2025 EcoVida.</p>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
