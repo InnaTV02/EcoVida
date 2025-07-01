@@ -8,34 +8,98 @@
 </head>
 <body>
   <header>
-    <div class="logo-contenedor">
+   <div class="logo-contenedor">
+  <a href="index.html">
     <img src="Imagen1.svg" alt="Logo de EcoVida" class="logo-ecovida" />
-    <h1>EcoVida</h1>
-  </div>
+  </a>
+  <h1>EcoVida</h1>
+</div>
+
 
 <!-- Botón hamburguesa (visible solo en móviles) -->
 <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
 
     <nav>
-      <ul class="menu-principal">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="marcas.html">Marcas</a></li>
-        <li><a href="guias.html">Guías</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
+    <ul class="menu-principal">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="blog.html">Blog</a></li>
+     <li class="menu-productos">
+  <a href="Productos.html">Productos</a>
+  <ul class="submenu">
+    <li><a href="hogar y limpieza.html">Hogar y limpieza</a></li>
+    <li><a href="Cuidado.html">Cuidado personal</a></li>
+    <li><a href="estilo.html">Estilo de vida</a></li>
+  </ul>
+</li>
+      <li><a href="guias.html">Guías</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
   </header>
-  <main class="container">
-    <section>
-      <h2>Guías Prácticas</h2>
-      <p>Contenido próximamente.</p>
-    </section>
-  </main>
+  <main class="container seccion-guias animacion-scroll">
+
+  <!-- Sección 1: Cómo empezar -->
+  <section class="bloque-guias">
+    <h2>Cómo empezar</h2>
+    <img src="img/empezar.webp" alt="Cómo empezar">
+  
+  <p class="contenido-guias">
+    Adoptar un estilo de vida ecológico no significa cambiarlo todo de golpe, sino tomar decisiones conscientes día a día. Aquí tienes algunos pasos sencillos para comenzar:
+  </p>
+  <ul class="contenido-guias">
+    <li>Reduce el plástico: Usa bolsas reutilizables, botellas de agua de acero o vidrio, y evita productos con empaques innecesarios.</li>
+    <li>Elige productos sostenibles: Opta por artículos hechos de materiales naturales como bambú, corcho o algodón orgánico.</li>
+    <li>Compra local y a granel: Apoya a productores locales y reduce el desperdicio de envases.</li>
+    <li>Ahorra energía y agua: Apaga luces que no uses, desconecta aparatos y repara fugas.</li>
+    <li>Recicla y reutiliza: Separa tus residuos y dale una segunda vida a objetos antes de desecharlos.</li>
+    <li>Cuida tu alimentación: Reduce el consumo de carne, elige productos de temporada y evita el desperdicio de comida.</li>
+    <li>Infórmate y comparte: Aprende sobre sostenibilidad y motiva a otros a hacer pequeños cambios.</li>
+  </ul>
+</section>
+
+  <!-- Sección 2: Errores comunes -->
+  <section class="bloque-guias dos-columnas">
+    <div class="columna">
+      <h3>Errores comunes</h3>
+      <img src="img/errores.webp" alt="Errores comunes">
+    </div>
+    <div class="columna">
+      <p class="contenido-guias">
+    Adoptar un estilo de vida sostenible es un proceso, y es normal cometer errores al principio. Aquí algunos de los más comunes:
+  </p>
+   <ul class="contenido-guias">
+    <li>Buscar la perfección: No necesitas hacerlo todo perfecto. Cada pequeño cambio cuenta.</li>
+    <li>Consumir más en nombre de lo “eco”: Comprar muchos productos ecológicos nuevos sin necesidad también genera impacto. Lo más sostenible es usar lo que ya tienes.</li>
+    <li>No investigar los materiales: No todo lo que dice “eco” realmente lo es. Verifica si los productos son compostables, reciclables o de origen renovable.</li>
+    <li>Olvidar reducir y reutilizar: Reciclar es importante, pero reducir el consumo y reutilizar es aún mejor.</li>
+    <li>Cambiar todo de golpe: Hacer cambios graduales es más efectivo y sostenible a largo plazo.</li>
+    <li>No considerar el transporte: Comprar productos ecológicos importados puede tener una huella de carbono alta. Prioriza lo local.</li>
+    <li>Pensar solo en lo físico: La sostenibilidad también incluye lo digital: reduce el uso innecesario de energía en dispositivos y almacenamiento en la nube.</li>
+  </ul>
+
+    </div>
+  </section>
+
+  <!-- Sección 3: Más información o consejos -->
+  <section class="bloque-guias">
+    <h2>Consejos finales</h2>
+    <img src="img/consejos2.webp" alt="Consejos">
+    <p>Aquí tienes algunos consejos finales que te pueden ayudar a mantener un estilo de vida ecológico:</p>
+
+    <ul class="contenido-guias">
+    <li>Empieza con lo que tienes: No necesitas comprar todo nuevo. Usar lo que ya tienes es el primer paso hacia la sostenibilidad.</li>
+    <li>Sé paciente contigo misma: Cambiar hábitos lleva tiempo. Cada pequeño paso cuenta.</li>
+    <li>Inspira, no impongas: Comparte tu estilo de vida con respeto. El ejemplo es más poderoso que la presión.</li>
+    <li>Infórmate constantemente: La sostenibilidad evoluciona. Mantente al día con nuevas ideas, materiales y soluciones.</li>
+    <li>Disfruta el proceso: Vivir de forma ecológica también es reconectar con lo simple, lo natural y lo esencial.</li>
+  </ul>
+  </section>
+</main>
+
   <footer>
     <p>&copy; 2025 EcoVida. </p>
   </footer>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

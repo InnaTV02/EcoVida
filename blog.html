@@ -8,24 +8,34 @@
 </head>
 <body>
   <header>
-    <div class="logo-contenedor">
+   <div class="logo-contenedor">
+  <a href="index.html">
     <img src="Imagen1.svg" alt="Logo de EcoVida" class="logo-ecovida" />
-    <h1>EcoVida</h1>
-  </div>
+  </a>
+  <h1>EcoVida</h1>
+</div>
+
 
 <!-- Botón hamburguesa (visible solo en móviles) -->
 <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
 
     <nav>
-      <ul class="menu-principal">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="marcas.html">Marcas</a></li>
-        <li><a href="guias.html">Guías</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
+    <ul class="menu-principal">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="blog.html">Blog</a></li>
+     <li class="menu-productos">
+  <a href="Productos.html">Productos</a>
+  <ul class="submenu">
+    <li><a href="hogar y limpieza.html">Hogar y limpieza</a></li>
+    <li><a href="Cuidado.html">Cuidado personal</a></li>
+    <li><a href="estilo.html">Estilo de vida</a></li>
+  </ul>
+</li>
+      <li><a href="guias.html">Guías</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
   </header>
   <main class="container">
   <h2 style="text-align: center;">Blog Ecológico</h2>
@@ -33,21 +43,21 @@
     <!-- Cuadro 1 -->
     <div class="blog-item animacion-scroll" data-info="¡Separar residuos es más fácil de lo que parece! Aprende cómo empezar desde casa.">
       <h3>Reciclaje</h3>
-      <img src="reciclaje.webp" alt="Reciclaje" />
+      <img src="img/reciclaje.webp" alt="Reciclaje" />
       <div class="blog-info"></div>
     </div>
 
     <!-- Cuadro 2 -->
     <div class="blog-item animacion-scroll" data-info="Empieza tu camino ecológico con estos 5 hábitos sostenibles que puedes aplicar hoy.">
       <h3>Consejos eco para principiantes</h3>
-      <img src="Consejos .webp" alt="Consejos ecológicos" />
+      <img src="img/Consejos .webp" alt="Consejos ecológicos" />
       <div class="blog-info"></div>
     </div>
 
     <!-- Cuadro 3 -->
     <div class="blog-item animacion-scroll" data-info="¿Es cierto que lo biodegradable se descompone siempre? Te contamos qué es mito y qué no.">
       <h3>Mitos y verdades ecológicas</h3>
-      <img src="mitos .webp" alt="Mitos ecológicos" />
+      <img src="img/mitos .webp" alt="Mitos ecológicos" />
       <div class="blog-info"></div>
     </div>
   </section>
@@ -56,6 +66,6 @@
   <footer>
     <p>&copy; 2025 EcoVida.</p>
   </footer>
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

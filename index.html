@@ -8,11 +8,14 @@
 </head>
 <body>
  <header>
-  <div class="logo-contenedor">
-
+ <div class="logo-contenedor">
+  <a href="index.html">
     <img src="Imagen1.svg" alt="Logo de EcoVida" class="logo-ecovida" />
-    <h1>EcoVida</h1>
-  </div>
+  </a>
+  <h1>EcoVida</h1>
+</div>
+
+
 <!-- Botón hamburguesa (visible solo en móviles) -->
 <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
 
@@ -21,7 +24,14 @@
       <li><a href="index.html">Inicio</a></li>
       <li><a href="nosotros.html">Nosotros</a></li>
       <li><a href="blog.html">Blog</a></li>
-      <li><a href="marcas.html">Marcas</a></li>
+     <li class="menu-productos">
+  <a href="Productos.html">Productos</a>
+  <ul class="submenu">
+    <li><a href="hogar y limpieza.html">Hogar y limpieza</a></li>
+    <li><a href="Cuidado.html">Cuidado personal</a></li>
+    <li><a href="estilo.html">Estilo de vida</a></li>
+  </ul>
+</li>
       <li><a href="guias.html">Guías</a></li>
       <li><a href="contacto.html">Contacto</a></li>
     </ul>
@@ -33,11 +43,11 @@
     <!----------Carrusel + el bloque gris ---------->
     <section class="inicio-layout">
       <div class="carrusel animacion-scroll">
-        <img src="inicio1.webp" class="carrusel-img active" alt="Ecología 1" />
-        <img src="inicio2.webp" class="carrusel-img" alt="Ecología 2" />
-        <img src="inicio3.webp" class="carrusel-img" alt="Ecología 3" />
-        <img src="inicio4.webp" class="carrusel-img" alt="Ecología 4" />
-        <img src="inicio5.webp" class="carrusel-img" alt="Ecología 5" />
+        <img src="img/inicio1.webp" class="carrusel-img active" alt="Ecología 1" />
+        <img src="img/inicio2.webp" class="carrusel-img" alt="Ecología 2" />
+        <img src="img/inicio3.webp" class="carrusel-img" alt="Ecología 3" />
+        <img src="img/inicio4.webp" class="carrusel-img" alt="Ecología 4" />
+        <img src="img/inicio5.webp" class="carrusel-img" alt="Ecología 5" />
       </div>
       <div class="texto-inicio animacion-scroll">
         <h2>Bienvenido a EcoVida</h2>
@@ -50,13 +60,13 @@
     <section class="bloque-extra">
       <h2>¿Por qué vivir de forma sostenible?</h2>
       <p>Adoptar hábitos ecológicos no solo protege el planeta, también mejora tu salud y economía. Cada acción cuenta, desde usar productos reutilizables hasta reducir el consumo energético.</p>
-      <img src="inicio6.webp" alt="Sostenibilidad diaria" class="imagen-extra" />
+      <img src="img/inicio6.webp" alt="Sostenibilidad diaria" class="imagen-extra" />
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 EcoVida.</p>
   </footer>
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

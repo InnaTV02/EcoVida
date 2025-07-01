@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Productos | EcoVida</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+  <header>
+    <div class="logo-contenedor">
+  <a href="index.html">
+    <img src="Imagen1.svg" alt="Logo de EcoVida" class="logo-ecovida" />
+  </a>
+  <h1>EcoVida</h1>
+</div>
+
+
+<!-- Botón hamburguesa (visible solo en móviles) -->
+<button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+
+   <nav>
+    <ul class="menu-principal">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="blog.html">Blog</a></li>
+     <li class="menu-productos">
+  <a href="Productos.html">Productos</a>
+  <ul class="submenu">
+    <li><a href="hogar y limpieza.html">Hogar y limpieza</a></li>
+    <li><a href="Cuidado.html">Cuidado personal</a></li>
+    <li><a href="estilo.html">Estilo de vida</a></li>
+  </ul>
+</li>
+      <li><a href="guias.html">Guías</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+  </header>
+ <main class="container">
+  <h2 style="text-align: center; margin: 2rem 0;">Productos Recomendados</h2>
+
+  <div class="inicio-layout animacion-scroll">
+    <!-- Hogar y limpieza -->
+    <a href="hogar y limpieza.html" style="flex: 1; min-width: 250px;">
+      <div class="tarjeta-producto">
+        <h3>Hogar y limpieza</h3>
+        <img src="img/hogarYlimpieza.webp" alt="Hogar y limpieza" class="imagen-extra" />
+      </div>
+    </a>
+
+    <!-- Cuidado personal -->
+    <a href="Cuidado.html" style="flex: 1; min-width: 250px;">
+      <div class="tarjeta-producto">
+        <h3>Cuidado personal</h3>
+        <img src="img/cuidadoPersonal.webp" alt="Cuidado personal" class="imagen-extra" />
+      </div>
+    </a>
+
+    <!-- Estilo de vida -->
+    <a href="estilo.html" style="flex: 1; min-width: 250px;">
+      <div class="tarjeta-producto">
+        <h3>Estilo de vida</h3>
+        <img src="img/estiloDeVida.webp" alt="Estilo de vida" class="imagen-extra" />
+      </div>
+    </a>
+  </div>
+</main>
+
+  <footer>
+    <p>&copy; 2025 EcoVida. </p>
+  </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>

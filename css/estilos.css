@@ -43,6 +43,46 @@ nav a:hover {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
+/* Submenú desplegable para "Productos" */
+.menu-productos {
+  position: relative;
+}
+
+.menu-productos .submenu {
+  display: none;
+  position: absolute;
+  background-color: var(--verde-oliva);
+  padding: 0.5rem 0;
+  border-radius: 8px;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  min-width: 200px;
+}
+
+.menu-productos .submenu li {
+  display: block;
+  padding: 0;
+}
+
+.menu-productos .submenu li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--blanco);
+  font-weight: normal;
+}
+
+.menu-productos .submenu li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Mostrar submenu al pasar el mouse (versión escritorio) */
+@media (min-width: 769px) {
+  .menu-productos:hover .submenu {
+    display: block;
+  }
+}
+
 /*------------------ BODY ------------------*/
 body {
   font-family: var(--fuente-texto);
@@ -81,7 +121,6 @@ footer {
   max-width: 1200px;
   margin: 0 auto;
 }
-
 
 /*------------------ LOGO ------------------*/
 .logo-contenedor {
@@ -147,6 +186,9 @@ footer {
   border-radius: 10px;
 }
 
+
+
+
 /*------------------ BLOG ------------------*/
 .blog-grid {
   background-color: var(--beige);
@@ -199,6 +241,30 @@ footer {
   justify-content: center;
   text-align: center;
   font-size: 1rem;
+  border-radius: 10px;
+}
+
+
+
+
+/*----------producto -----------------*/
+
+.tarjeta-producto {
+  background-color: var(--beige);
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tarjeta-producto img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 1rem;
   border-radius: 10px;
 }
 
@@ -309,6 +375,7 @@ footer {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   color: var(--verde-oliva);
+  
 }
 
 .contacto-info h3,
@@ -337,7 +404,8 @@ footer {
 }
 
 .formulario-contacto input,
-.formulario-contacto textarea {
+.formulario-contacto textarea,
+.formulario-contacto select {
   width: 100%;
   padding: 0.6rem;
   margin-top: 0.3rem;
@@ -346,10 +414,12 @@ footer {
   font-family: var(--fuente-texto);
   font-size: 1rem;
   color: #333;
+  background-color: #fff;
 }
 
 .formulario-contacto input:focus,
-.formulario-contacto textarea:focus {
+.formulario-contacto textarea:focus,
+.formulario-contacto select:focus {
   outline: none;
   border-color: var(--verde-oliva);
   box-shadow: 0 0 5px rgba(85, 107, 47, 0.3);
@@ -371,6 +441,7 @@ footer {
   background-color: #6b8e23;
   transform: scale(1.03);
 }
+
 
 /*------------- MENSAJES DE RESPUESTA ----------------*/
 
@@ -395,7 +466,8 @@ footer {
   padding: 0.75rem 1rem;
   border-radius: 8px;
 }
-/*esta parte es para que al cargar la pagina de contacto
+
+/* esta parte es para que al cargar la pagina de contacto
 el formulario se deslice, tambien el contacto y aparte una parte del index */
 /* Animación de deslizamiento al hacer scroll en todos los elementos que se seleccionen*/
 .animacion-scroll {
@@ -447,7 +519,7 @@ el formulario se deslice, tambien el contacto y aparte una parte del index */
      font-size: 2.5rem;           /* tamaño de icono de menu */
       background: none; /* Evita fondo por defecto del botón */
      border: none;
-    color: var(--verde-oliva); /* 3 rayitas en verde oliva */
+    color: var(--verde-oliva); /* 3 rayitas en color verde oliva */
     cursor: pointer;
   margin: 0.5rem 1rem;
   padding: 0.25rem 0.5rem;
@@ -487,4 +559,132 @@ el formulario se deslice, tambien el contacto y aparte una parte del index */
   }
 }
 
+/*------ PRODUCTOS EN GRID CON CORTINA DESLIZABLE --------*/
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: var(--beige);
+  border-radius: 12px;
+}
 
+.producto {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.producto:hover {
+  transform: scale(1.02);
+}
+
+.producto img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+.producto h3 {
+  margin: 0.5rem 0;
+  text-align: center;
+  color: var(--verde-oliva);
+  font-family: var(--fuente-titulo);
+}
+
+.info-hover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(85, 107, 47, 0.85);
+  color: var(--blanco);
+  padding: 1rem;
+  font-size: 0.9rem;
+  border-radius: 0 0 12px 12px;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.producto.activo .info-hover {
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.producto img,
+.producto h3 {
+  cursor: pointer;
+}
+
+/*------------------ GUÍAS PRÁCTICAS ------------------*/
+
+.seccion-guias {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem 1rem;
+}
+
+.bloque-guias {
+  background-color: var(--beige);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  color: var(--verde-oliva);
+}
+
+.bloque-guias h2, .bloque-guias h3 {
+  margin-bottom: 1rem;
+  color: var(--verde-oliva);
+  font-family: var(--fuente-titulo);
+  text-align: center;
+}
+
+.bloque-guias img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.bloque-guias p {
+  font-family: var(--fuente-texto);
+  font-size: 1rem;
+}
+
+/* Dos columnas (para errores y recursos) */
+.dos-columnas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+.dos-columnas .columna {
+  flex: 1;
+  min-width: 280px;
+}
+
+.dos-columnas img {
+  width: 100%;
+  border-radius: 10px;
+  
+}
+
+.contenido-guias {
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto 1rem auto;
+  padding-left: 1.2rem;
+}

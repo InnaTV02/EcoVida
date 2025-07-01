@@ -9,23 +9,33 @@
 <body>
   <header>
     <div class="logo-contenedor">
-      <img src="Imagen1.svg" alt="Logo de EcoVida" class="logo-ecovida" />
-      <h1>EcoVida</h1>
-    </div>
+  <a href="index.html">
+    <img src="Imagen1.svg" alt="Logo de EcoVida" class="logo-ecovida" />
+  </a>
+  <h1>EcoVida</h1>
+</div>
+
 
 <!-- Botón hamburguesa (visible solo en móviles) -->
 <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
 
     <nav>
-      <ul class="menu-principal">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="marcas.html">Marcas</a></li>
-        <li><a href="guias.html">Guías</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
+    <ul class="menu-principal">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="blog.html">Blog</a></li>
+     <li class="menu-productos">
+  <a href="Productos.html">Productos</a>
+  <ul class="submenu">
+    <li><a href="hogar y limpieza.html">Hogar y limpieza</a></li>
+    <li><a href="Cuidado.html">Cuidado personal</a></li>
+    <li><a href="estilo.html">Estilo de vida</a></li>
+  </ul>
+</li>
+      <li><a href="guias.html">Guías</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
   </header>
 
   <main class="container">
@@ -47,26 +57,34 @@
       </div>
 
       <!-----formulario----->
-      <form id="formulario-contacto" class="formulario-contacto animacion-scroll">
-        <h3>Formulario de contacto</h3>
+      
+     <form id="formulario-contacto" class="formulario-contacto animacion-scroll">
+  <h3>Formulario de consulta</h3>
 
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required />
+  <label for="nombre">Nombre y apellido:</label>
+  <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
 
-        <label for="apellido">Apellido:</label>
-        <input type="text" id="apellido" name="apellido" required />
+  <label for="correo">Correo electrónico:</label>
+  <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required />
 
-        <label for="correo">Correo electrónico:</label>
-        <input type="email" id="correo" name="correo" required />
+  <label for="tema">¿Sobre qué deseas preguntar?</label>
+  <select id="tema" name="tema" required>
+    <option value="">Selecciona una opción</option>
+    <option value="productos">Productos ecológicos</option>
+    <option value="colaboracion">Colaboración o voluntariado</option>
+    <option value="eventos">Eventos sostenibles</option>
+    <option value="otros">Otros temas</option>
+  </select>
 
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+  <label for="mensaje">Mensaje:</label>
+  <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe aquí tu mensaje..." required></textarea>
 
-        <button type="submit">Enviar</button>
+  <button type="submit">Enviar</button>
 
-        <p id="mensaje-error" class="mensaje-error"></p>
-        <p id="mensaje-exito" class="mensaje-exito">Mensaje enviado con éxito ✅</p>
-      </form>
+  <p id="mensaje-error" class="mensaje-error"></p>
+  <p id="mensaje-exito" class="mensaje-exito">Mensaje enviado con éxito ✅</p>
+</form>
+
     </div>
   </main>
 
@@ -74,6 +92,6 @@
     <p>&copy; 2025 EcoVida.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

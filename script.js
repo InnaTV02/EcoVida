@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  //Carrusel del inicio 
+  // Carrusel del inicio 
   const imagenes = document.querySelectorAll(".carrusel-img");
   let index = 0;
 
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setInterval(mostrarSiguiente, 3000);
   }
 
-  //  Hover en cuadrículas del blog
+  // Hover en cuadrículas del blog
   const blogItems = document.querySelectorAll(".blog-item");
   blogItems.forEach(item => {
     const infoBox = item.querySelector(".blog-info");
@@ -47,24 +47,21 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
 
       const nombre = formulario.nombre.value.trim();
-      const apellido = formulario.apellido.value.trim();
+      /*const apellido = formulario.apellido.value.trim();*/
       const correo = formulario.correo.value.trim();
       const mensaje = formulario.mensaje.value.trim();
 
-      // Validación de campos vacíos
-      if (!nombre || !apellido || !correo || !mensaje) {
+      if (!nombre ||  !correo || !mensaje) {
         mostrarError("Por favor completa todos los campos.");
         return;
       }
 
-      // Validación de correo electrónico
       const correoValido = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
       if (!correoValido.test(correo)) {
         mostrarError("Correo inválido. Verifica el formato.");
         return;
       }
 
-      // Todo correcto: mostrar mensaje de éxito
       mensajeError.style.display = "none";
       mensajeExito.style.display = "block";
 
@@ -80,12 +77,34 @@ document.addEventListener("DOMContentLoaded", () => {
       mensajeExito.style.display = "none";
     }
   }
-//--------------------------------------------------//
 
+  // Cortina en productos (solo clic en imagen o título)
+  const productos = document.querySelectorAll(".producto");
+  productos.forEach(producto => {
+    const texto = producto.dataset.info;
+    const cortina = producto.querySelector(".info-hover");
+    cortina.textContent = texto;
 
+    const imagen = producto.querySelector("img");
+    const titulo = producto.querySelector("h3");
+
+    function toggleCortina() {
+      producto.classList.toggle("activo");
+    }
+
+    if (imagen) {
+      imagen.style.cursor = "pointer"; // indica que es clickeable
+      imagen.addEventListener("click", toggleCortina);
+    }
+
+    if (titulo) {
+      titulo.style.cursor = "pointer";
+      titulo.addEventListener("click", toggleCortina);
+    }
+  });
 });
 
-//Animación de scroll para cualquier elemento que le haya puesto la clase .animacion-scroll
+// Animación de scroll
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -93,14 +112,13 @@ const observer = new IntersectionObserver(entries => {
       observer.unobserve(entry.target);
     }
   });
+  
 });
 
 const elementosAnimados = document.querySelectorAll('.animacion-scroll');
 elementosAnimados.forEach(el => observer.observe(el));
 
-
-
-//----------------------------------------------//
+// Menú hamburguesa
 const botonMenu = document.querySelector('.menu-toggle');
 const menu = document.querySelector('nav ul.menu-principal');
 
@@ -109,3 +127,4 @@ if (botonMenu && menu) {
     menu.classList.toggle('activo');
   });
 }
+

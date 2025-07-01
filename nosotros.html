@@ -8,24 +8,35 @@
 </head>
 <body>
   <header>
-   <div class="logo-contenedor">
+  <div class="logo-contenedor">
+  <a href="index.html">
     <img src="Imagen1.svg" alt="Logo de EcoVida" class="logo-ecovida" />
-    <h1>EcoVida</h1>
-  </div>
+  </a>
+  <h1>EcoVida</h1>
+</div>
+
+
 
 <!-- Botón hamburguesa (visible solo en móviles) -->
 <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
 
     <nav>
-      <ul class="menu-principal">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="marcas.html">Marcas</a></li>
-        <li><a href="guias.html">Guías</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
+    <ul class="menu-principal">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="blog.html">Blog</a></li>
+     <li class="menu-productos">
+  <a href="Productos.html">Productos</a>
+  <ul class="submenu">
+    <li><a href="hogar y limpieza.html">Hogar y limpieza</a></li>
+    <li><a href="Cuidado.html">Cuidado personal</a></li>
+    <li><a href="estilo.html">Estilo de vida</a></li>
+  </ul>
+</li>
+      <li><a href="guias.html">Guías</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
   </header>
   <main class="container">
   <h2 style="text-align: center;">Conócenos</h2>
@@ -68,6 +79,6 @@
   <footer>
     <p>&copy; 2025 EcoVida. </p>
   </footer>
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
